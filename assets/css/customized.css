@@ -54,7 +54,7 @@ h2, h3 {
 .actionShot {
   height: 70%;
   width: 100%;
-  background-image: url(/assets/actionShot.jpg);
+  background-image: url(/assets/animation.gif);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 66% 8%;
