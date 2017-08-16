@@ -9,6 +9,13 @@
   fbq('init', '1434436959980967'); // Insert your pixel ID here.
   fbq('track', 'PageView');
 
+if (window.location.pathname.indexOf('product') > -1) {
+  fbq('track', 'Lead')
+} else if (window.location.pathname.indexOf('thanks') > -1) {
+  fbq('track', 'AddToCart')
+}
+  fbq('track', window.location.pathname.replace(/\W/g, ''))
+
   fbq('track', 'Search', {
     search_string: findGetParameter('product')
   });
