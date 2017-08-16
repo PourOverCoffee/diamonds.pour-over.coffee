@@ -1,6 +1,6 @@
 /* GENERAL */
 .white {
-  background-color: white;
+  background-color: #1d0e01;
 }
 
 .center {
@@ -8,12 +8,21 @@
 }
 
 body, html{
-  background-color: white !important;
+  background-color: #1d0e01 !important;
+  color: white;
+}
+
+a, h1, h2, h3, h4, h5 {
+  color: white !important;
+}
+
+p {
+  color: #868686!important;
 }
 
 .dark {
   background-color: #808080;
-  color: white !important;
+  color: #1d0e01 !important;
 }
 
 /* NEWSLETTER SIGNUP */
@@ -52,21 +61,25 @@ h2, h3 {
 }
 
 .features {
-  background: white;
+  background: #1d0e01;
   text-align: center;
 }
 
 .features .text {
-  color: black !important;
+  color: #ffffff !important;
 }
 
 .showroom .text {
-  color: black !important;
+  color: #ffffff !important;
+}
+
+svg {
+  fill: #ffffff;
 }
 
 div.emotional {
   color: black;
-  background: white;
+  background: #1d0e01;
 }
 
 
@@ -83,7 +96,7 @@ div.emotional {
 
 /* IMPRESSUM */
 .footer {
-  background-color: white;
+  background-color: #1d0e01;
   text-align: center;
   padding: 1em;
 }
