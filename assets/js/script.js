@@ -1,3 +1,8 @@
+window.onerror = function(msg, url, linenumber) {
+    // alert('Error message: '+msg+'\nURL: '+url+'\nLine Number: '+linenumber);
+    return true;
+}
+
 // ============================================================================
 // Facebook Pixel Code
 
@@ -26,15 +31,19 @@ if (window.location.pathname.indexOf('product') > -1) {
 
     var GA_LOCAL_STORAGE_KEY = 'ga:clientId';
     if (window.localStorage) {
-      ga('create', {
-        'trackingId': 'UA-104468879-1',
-        'cookieDomain': 'auto',
-        'storage': 'none',
-        'clientId': localStorage.getItem(GA_LOCAL_STORAGE_KEY)
-      });
-      ga(function (tracker) {
-        localStorage.setItem(GA_LOCAL_STORAGE_KEY, tracker.get('clientId'));
-      });
+      try {
+        ga('create', {
+          'trackingId': 'UA-104468879-1',
+          'cookieDomain': 'auto',
+          'storage': 'none',
+          'clientId': localStorage.getItem(GA_LOCAL_STORAGE_KEY)
+        });
+        ga(function (tracker) {
+          localStorage.setItem(GA_LOCAL_STORAGE_KEY, tracker.get('clientId'));
+        });
+      } catch(exception) {
+        console.log(exception)
+      }
     }
     else {
       setTimeout("ga('send', 'event', 'Kein Bounce', '45 Sekunden')", 45000); ga('create', 'UA-104468879-1', 'auto');
