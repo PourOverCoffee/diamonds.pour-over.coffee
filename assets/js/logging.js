@@ -58,7 +58,7 @@ function logSession() {
     jQuery.ajax({
         url: server + "/log/action",
         type: "GET",
-        data: {data: action}
+        data: {data: session}
     })
     .done(function(data, textStatus, jqXHR) {
         // console.log("HTTP Request Succeeded: " + jqXHR.status);
