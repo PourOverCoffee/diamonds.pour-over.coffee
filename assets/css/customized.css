@@ -73,7 +73,7 @@ h2, h3 {
   background-image: url(/assets/animation.gif);
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: 66% 8%;
+  background-position: center;
 }
 
 @media (max-width: 767px) {
