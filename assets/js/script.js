@@ -67,6 +67,7 @@ function addScollListenerToId(id) {
       element: element,
       handler: function() {
         console.log("Reached WayPoint " + id)
+	ga('send', 'event', 'scroll', id);
         logAction("scrollPoint-" + window.location.search.replace('?', ''), id)
         fbq('track', 'scroll', {
 		  element: id
@@ -74,7 +75,6 @@ function addScollListenerToId(id) {
 		fbq('track', 'scroll-'+id, {
 		  element: id
 		}); 
-		ga('send', 'event', 'scroll', id);
       },
       offset: 'bottom-in-view'
     })
@@ -112,6 +112,7 @@ $('.tryButton, .productButton').each(function() {
     // Don't follow the link
     event.preventDefault();
 
+    ga('send', 'event', 'clickButton', this.id);
     logAction("clickButton-" + this.id)
     fbq('track', 'clickButton', {
 	  element: this.id
@@ -119,11 +120,10 @@ $('.tryButton, .productButton').each(function() {
 	fbq('track', 'clickButton-'+this.id, {
 	  element: this.id
 	}); 
-	ga('send', 'event', 'clickButton', this.id);
 
 	window.setTimeout(function() {
         window.location = href;
-	}, 1000);
+	}, 1300);
   })
 })
 
