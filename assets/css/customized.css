@@ -20,6 +20,22 @@ p {
   color: #b49b57 !important;
 }
 
+/* Small devices (tablets, 768px and up) */
+@media (max-width: 767px) {
+  .row-sm-no-padding {
+    [class*="col-"] {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+  }
+
+  .container-no-padding {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      width: 100%;
+  }
+}
+
 .dark {
   background-color: #808080;
   color: #1d0e01 !important;
