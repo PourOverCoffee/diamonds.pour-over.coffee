@@ -84,13 +84,22 @@ function addScollListenerToId(id) {
   // Add scroll listeners
   $('[id^=scroll-]').each(function() { addScollListenerToId(this.id) })
 
+
 // ============================================================================
 // Try Buttons
 $('.tryButton').each(function() { 
-	$(this).attr('href', 'thanks.html?product=05_'+ window.location.host + '&'+window.location.search.replace('?', '')) 
+  if(window.location.search.indexOf('product=') == -1){
+    $(this).attr('href', 'thanks.html?product=05_'+ window.location.host.split('.')[0] + '&'+window.location.search.replace('?', '')) 
+  }else{
+    $(this).attr('href', 'thanks.html'+window.location.search) 
+  }
 })
 $('.productButton').each(function() { 
-	$(this).attr('href', 'product.html?product=05_'+ window.location.host + '&'+window.location.search.replace('?', '')) 
+  if(window.location.search.indexOf('product=') == -1){
+    $(this).attr('href', 'product.html?product=05_'+ window.location.host.split('.')[0] + '&'+window.location.search.replace('?', '')) 
+  }else{
+    $(this).attr('href', 'product.html'+window.location.search) 
+  }
 })
 
 $('.tryButton, .productButton').each(function() {
