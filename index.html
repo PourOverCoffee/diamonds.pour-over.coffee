@@ -56,7 +56,8 @@ PITCH SECTION - (Image on left - Text on right)
 ####################################################################################################
 -->
 
-  <div class="slider main-stage emotional" id="scroll-emotional">
+  <div class="slider main-stage emotional" id="scroll-emotional" style="height: 70%; background-image: url('assets/pitchImage.png'); background-size: cover;">
+  <img src="assets/diamond.png" class="hidden-md" style="position: absolute; top: 10px; left: 10px; width: 100px; height: auto;"/>   
     <div id="slider-342" class="slider-container" data-cycon-module="element-slider" data-option-carousel="false" data-option-paginationSelector="slider-pagination-main"
       data-option-duration="500" data-option-autoplay="1000000" data-option-paginationSelector="false">
       <div class="slider-stage">
@@ -64,10 +65,10 @@ PITCH SECTION - (Image on left - Text on right)
           <div class="container-main-stage">
             <div class="graphic-main-stage">
               <div class="wrapper no-select">
-                <img src="assets/pitchImage.png" style="margin-left: 50%; transform: translateX(-50%);" />           
+                <!-- <img src="assets/pitchImage.png" style="margin-left: 50%; transform: translateX(-50%);" />            -->
 <!-- <img src="http://via.placeholder.com/350x300" style="margin-left: 50%; transform: translateX(-50%); margin-bottom: 50px" /> -->
               </div>
-              <div class="text-main-stage">
+              <div class="text-main-stage hidden-xs" style="position: absolute; margin-right: 30px !important; right: 10px;">
                 <img src="assets/diamond.png" style="width: 100px; height: auto; margin-left: 50%; transform: translateX(-50%); margin-top: 30px;"/>      
                 <h2 class="h2" style="padding: 0 12px; padding-top: 30px;     font-size: 32px;">
                   DIAMOND IN A CUP
@@ -77,7 +78,7 @@ PITCH SECTION - (Image on left - Text on right)
                     font-size: 17px;
                     margin-top: 40px;
                     padding: 0 12px;
-                    ">The diamond shaped pour-over coffee experience touching all senses.</p>
+                    ">The diamond shaped pour-over coffee experience touching all your senses.</p>
               </div>
             </div>
           </div>
@@ -88,6 +89,22 @@ PITCH SECTION - (Image on left - Text on right)
       <div class="slider-pagination-main"></div>
     </div>
   </div>
+
+   <div class="col-xs-12 center callToAction" style=" padding: 20px 0;">
+      <div class="row">
+          <div class="text-main-stage hidden-md">
+            <h2 class="h2" style="padding: 0 12px; padding-top: 30px; font-size: 32px;">
+              DIAMOND IN A CUP
+            </h2>
+            <p style="
+                color: black;
+                font-size: 17px;
+                margin-top: 40px;
+                padding: 0 12px;
+                ">The diamond shaped pour-over coffee experience touching all your senses.</p>
+          </div>
+    </div>
+   <div class="mb-96"></div>
 
   <!-- 
 ####################################################################################################
@@ -124,7 +141,7 @@ TEXT-ONLINE SECTION - (Text on left)
 FEATURES - (Icons with Headline and Subheadline)
 ####################################################################################################
 -->
-  <div id="scroll-actionShot" class="actionShot">
+  <div id="scroll-actionShot" class="actionShot" style="min-height: 250px;">
   </div>
   <section class="background-story dark features">
     <div class="container">
@@ -140,7 +157,7 @@ FEATURES - (Icons with Headline and Subheadline)
           <div class="row">
             <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2">
               <div class="text text-medium text-center">
-                <img class="graphic story" src="assets/features/first.svg" alt="%FEATURE_1%!" />
+                <img class="graphic story" src="assets/icon1.png" alt="%FEATURE_1%!"  style="height: 180px; border-radius: 15px; margin-bottom: 20px; margin-left:-40px"/>
                 <p class="text larseit-medium">The Diamand Coffee</p>
                 <p><span style="font-weight: 400;">Enjoy our hand chosen coffee</span></p>
               </div>
@@ -151,9 +168,9 @@ FEATURES - (Icons with Headline and Subheadline)
           <div class="row">
             <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2">
               <div class="text text-medium text-center">
-                <img class="graphic story" src="assets/features/second.svg" alt="%FEATURE_2%!" />
+                <img class="graphic story" src="assets/icon2.png" alt="%FEATURE_2%!"  style="height: 120px; border-radius: 15px; margin-bottom: 20px;"/>
                 <p class="text larseit-medium">The Diamond Collection</p>
-                <p><span style="font-weight: 400;">Touch all your senses with an exclusive pour-over system</span></p>
+                <p><span style="font-weight: 400;">Touch all your senses with the exclusive pour-over system</span></p>
               </div>
             </div>
           </div>
@@ -162,9 +179,9 @@ FEATURES - (Icons with Headline and Subheadline)
           <div class="row">
             <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2">
               <div class="text text-medium text-center">
-                <img class="graphic story" src="assets/features/third.svg" alt="%FEATURE_3%!" />
+                <img class="graphic story" src="assets/icon3.jpg" alt="%FEATURE_3%!" style="height: 86px; border-radius: 15px; margin-bottom: 20px;"/>
                 <p class="text larseit-medium">The Diamond Service</p>
-                <p><span style="font-weight: 400;">Accompanying you on your journey to your perfect cup of pour-over coffee</span></p>
+                <p><span style="font-weight: 400;">Accompanying you on your journey to the perfect cup of pour-over coffee</span></p>
               </div>
             </div>
           </div>
@@ -172,6 +189,14 @@ FEATURES - (Icons with Headline and Subheadline)
       </div>
   </section>
 
+    <div class="col-xs-12 center callToAction" style=" padding: 20px 0;">
+      <div class="row">
+      <!-- <h3 style="margin-bottom: 20px;
+    margin: 0 40px 20px;">Hand crafted coffee. <br/> Made simple.</h3> -->
+        <p><a href="product.html" type="button" class="btn btn-default btn-lg tryButton productButton" id="scroll-productButton-middle">View our packages</a></p>
+      </div>
+    </div>
+    <div class="mb-96"></div>
 
 <!-- 
   ####################################################################################################
@@ -190,26 +215,26 @@ FEATURES - (Icons with Headline and Subheadline)
       <div class="row mb-24">
           <div class="col-s-12 col-md-4">
               <div class="mobile-center">
-              <img class="graphic product" src="assets/customer.jpg" style="border-radius: 5000px; max-width: 200px; float: right;"/>
+              <img class="graphic product" src="assets/customer1.jpg" style="border-radius: 5000px; max-width: 200px; float: right;"/>
               </div>
           </div>
           <div class="col-xs-12 col-sm-8 col-md-8">
               <div class="mobile-center">
               <h3 style="margin-bottom: 10px">Kerstin</h3>
-              <h4 style="color: #868686!important">"The design of a Diamond collection fits my way of life."</h4>
+              <h4 style="color: #b49b57!important">"The design of a Diamond collection fits my way of life."</h4>
               </div>
           </div>
       </div>  
       <div class="row mb-24">
           <div class="col-s-12 col-md-4">
               <div class="mobile-center">
-              <img class="graphic product" src="assets/customer2.jpg" style="border-radius: 5000px; max-width: 200px; float: right;"/>
+              <img class="graphic product" src="assets/customer3.jpg" style="border-radius: 5000px; max-width: 200px; float: right;"/>
               </div>
           </div>
           <div class="col-xs-12 col-sm-8 col-md-8">
               <div class="mobile-center">
               <h3 style="margin-bottom: 10px">Brian</h3>
-              <h4 style="color: #868686!important">"The concierge service suggested the perfect coffee choice for my dinner."</h4>
+              <h4 style="color: #b49b57!important">"The concierge service suggested the perfect coffee choice for my dinner."</h4>
               </div>
           </div>
       </div> 
@@ -222,7 +247,7 @@ FEATURES - (Icons with Headline and Subheadline)
           <div class="col-xs-12 col-sm-8 col-md-8">
               <div class="mobile-center">
               <h3 style="margin-bottom: 10px">Claire</h3>
-              <h4 style="color: #868686!important">"The Diamonds highlight my sophisticated work."</h4>
+              <h4 style="color: #b49b57!important">"The Diamonds highlight my sophisticated taste."</h4>
               </div>
           </div>
       </div>  

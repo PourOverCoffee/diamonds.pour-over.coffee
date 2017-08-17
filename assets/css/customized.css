@@ -12,12 +12,12 @@ body, html{
   color: white;
 }
 
-a, h1, h2, h3, h4, h5 {
-  color: white !important;
+h1, h2, h3, h4, h5 {
+  color: #b49b57 !important;
 }
 
 p {
-  color: #868686!important;
+  color: #b49b57 !important;
 }
 
 .dark {
@@ -27,17 +27,17 @@ p {
 
 /* NEWSLETTER SIGNUP */
 .callToAction  a, .tryButton, .productButton {
-  background: #91c11e;
+  background: #b49b57;
   border: none;
   border-radius: 2px;
   text-transform: uppercase;
-  color: white;
+  color: black;
 }
 
 .callToAction  a:hover,  .tryButton:hover, .productButton:hover {
-  background: #79a119;
+  background: #b49b57;
   border: none;
-  color: white;
+  color: black;
 }
 
 h2, h3 {
@@ -52,10 +52,10 @@ h2, h3 {
 }
 
 .actionShot {
-  height: 70%;
+  height: 36%;
   width: 100%;
   background-image: url(/assets/animation.gif);
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: 66% 8%;
 }
@@ -66,15 +66,15 @@ h2, h3 {
 }
 
 .features .text {
-  color: #ffffff !important;
+  color: #b49b57 !important;
 }
 
 .showroom .text {
-  color: #ffffff !important;
+  color: #b49b57 !important;
 }
 
 svg {
-  fill: #ffffff;
+  fill: #b49b57;
 }
 
 div.emotional {
