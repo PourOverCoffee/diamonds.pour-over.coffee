@@ -60,6 +60,27 @@ h2, h3 {
   background-position: 66% 8%;
 }
 
+@media (max-width: 767px) {
+  .main-stage.emotional {
+    background-position: -130px 0;
+  }
+
+  .hidden-xs {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .hidden-md {
+    display: none;
+  }
+}
+
+.diamondIcon {
+  width: 20px;
+  height: auto;
+}
+
 .features {
   background: #1d0e01;
   text-align: center;
