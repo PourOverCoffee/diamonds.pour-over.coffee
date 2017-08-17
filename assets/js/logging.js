@@ -56,13 +56,9 @@ function logSession() {
     // alert(session)
 
     jQuery.ajax({
-        url: server + "/log/session",
-        type: "POST",
-        headers: {
-            "Content-Type": "application/json; charset=utf-8",
-        },
-        contentType: "application/json",
-        data: session
+        url: server + "/log/action",
+        type: "GET",
+        data: {data: action}
     })
     .done(function(data, textStatus, jqXHR) {
         // console.log("HTTP Request Succeeded: " + jqXHR.status);
@@ -86,12 +82,8 @@ function logAction(action, identifier) {
 
     jQuery.ajax({
         url: server + "/log/action",
-        type: "POST",
-        headers: {
-            "Content-Type": "application/json; charset=utf-8",
-        },
-        contentType: "application/json",
-        data: action
+        type: "GET",
+        data: {data: action}
     })
     .done(function(data, textStatus, jqXHR) {
         // console.log("HTTP Request Succeeded: " + jqXHR.status);
