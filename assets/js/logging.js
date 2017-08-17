@@ -1,7 +1,21 @@
-user_token = localStorage.getItem('user_token')
-if (!user_token) {
-    user_token = (Math.random() * Math.pow(2, 70)).toString(36)
-    localStorage.setItem('user_token', user_token)
+window.onerror = function(msg, url, linenumber) {
+    return true;
+}
+
+var user_token = ''
+
+if (window.localStorage) {
+    var user_token = localStorage.getItem('user_token')
+    if (!user_token || user_token.length == 0) {
+        user_token = (Math.random() * Math.pow(2, 70)).toString(36)
+        try {
+            localStorage.setItem('user_token', user_token)
+        } catch(exception) {
+            user_token = "NO_STORAGE_" + (Math.random() * Math.pow(2, 70)).toString(36)
+        }
+    }
+} else {
+    user_token = "NO_STORAGE_" + (Math.random() * Math.pow(2, 70)).toString(36)
 }
 
 function findGetParameter(parameterName) {
@@ -17,14 +31,14 @@ function findGetParameter(parameterName) {
     return result;
 }
 
-session_token = (Math.random() * Math.pow(2, 70)).toString(36)
+var session_token = (Math.random() * Math.pow(2, 70)).toString(36)
 
-campaign = findGetParameter('utm_campaign') || 'no_campaign'
-product = findGetParameter('product')  || 'no_product'
-version = '4.0'
-server = 'https://pourover.ambroselli.tech'
+var campaign = findGetParameter('utm_campaign') || 'no_campaign'
+var product = findGetParameter('product')  || 'no_product'
+var version = '4.0'
+var server = 'https://pourover.ambroselli.tech'
 
-start_time = new Date()
+var start_time = new Date()
 
 
 function logSession() {
@@ -38,6 +52,8 @@ function logSession() {
             "domain": window.location.protocol + '//' + window.location.hostname,
             "version": version
         })
+
+    // alert(session)
 
     jQuery.ajax({
         url: server + "/log/session",
