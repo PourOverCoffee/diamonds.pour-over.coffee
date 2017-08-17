@@ -56,7 +56,7 @@ function logSession() {
     // alert(session)
 
     jQuery.ajax({
-        url: server + "/log/action",
+        url: server + "/log/session",
         type: "GET",
         data: {data: session}
     })
